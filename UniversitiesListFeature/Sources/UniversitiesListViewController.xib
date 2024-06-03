@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UniversitiesListViewController">
+            <connections>
+                <outlet property="activityIndicator" destination="gB6-P3-TOv" id="yXA-Jv-quM"/>
+                <outlet property="tableView" destination="2po-rc-h1n" id="Wp4-Yk-LvX"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewEmpty" destination="d3W-eC-bhA" id="aKI-nl-5En"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Universities List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ru3-3d-wth">
+                    <rect key="frame" x="20" y="48" width="353" height="55"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="Xjj-h9-IQr"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                    <color key="textColor" red="0.08235294118" green="0.16862745100000001" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2po-rc-h1n">
+                    <rect key="frame" x="20" y="111" width="353" height="707"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d3W-eC-bhA">
+                    <rect key="frame" x="0.0" y="111" width="393" height="741"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="gB6-P3-TOv">
+                            <rect key="frame" x="178" y="352" width="37" height="37"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="gB6-P3-TOv" firstAttribute="centerX" secondItem="d3W-eC-bhA" secondAttribute="centerX" id="1qr-8j-Hx8"/>
+                        <constraint firstItem="gB6-P3-TOv" firstAttribute="centerY" secondItem="d3W-eC-bhA" secondAttribute="centerY" id="yKh-lm-3FY"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="ru3-3d-wth" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="5y7-fa-ow3"/>
+                <constraint firstAttribute="bottom" secondItem="d3W-eC-bhA" secondAttribute="bottom" id="6NV-vd-hDg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="d3W-eC-bhA" secondAttribute="trailing" id="Bbg-m5-8Nw"/>
+                <constraint firstItem="d3W-eC-bhA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Dq9-Od-1r6"/>
+                <constraint firstItem="2po-rc-h1n" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="FS0-Mj-IEI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ru3-3d-wth" secondAttribute="trailing" constant="20" id="W69-AV-J0s"/>
+                <constraint firstItem="ru3-3d-wth" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="-11" id="bBX-5d-Fya"/>
+                <constraint firstItem="2po-rc-h1n" firstAttribute="top" secondItem="ru3-3d-wth" secondAttribute="bottom" constant="8" symbolic="YES" id="dRC-aA-5Fl"/>
+                <constraint firstItem="2po-rc-h1n" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="hDQ-Ng-Vjh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2po-rc-h1n" secondAttribute="trailing" constant="20" id="hv0-WX-yEp"/>
+                <constraint firstItem="d3W-eC-bhA" firstAttribute="top" secondItem="ru3-3d-wth" secondAttribute="bottom" constant="8" id="unz-0h-NY3"/>
+            </constraints>
+            <point key="canvasLocation" x="-11.450381679389313" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

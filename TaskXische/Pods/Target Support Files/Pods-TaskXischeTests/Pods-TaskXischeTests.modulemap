@@ -1,0 +1,6 @@
+framework module Pods_TaskXischeTests {
+  umbrella header "Pods-TaskXischeTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

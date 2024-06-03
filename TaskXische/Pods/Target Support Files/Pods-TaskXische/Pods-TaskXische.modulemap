@@ -1,0 +1,6 @@
+framework module Pods_TaskXische {
+  umbrella header "Pods-TaskXische-umbrella.h"
+
+  export *
+  module * { export * }
+}
