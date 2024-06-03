@@ -26,14 +26,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     fileprivate func presentRootScreen() {
         window = UIWindow(frame: UIScreen.main.bounds)
         let router = Router()
-        let moduleAFacory = ModuleAFactory()
-        let moduleBFacory = ModuleBFactory()
-        router.ModulAFactory = moduleAFacory
-        router.ModulBFactory = moduleBFacory
+        let UniversitiesListFacory = UniversitiesListFactory()
+        let UniversitiesDetailsFacory = UniversitiesDetailsFactory()
+        router.ModulAFactory = UniversitiesListFacory
+        router.ModulBFactory = UniversitiesDetailsFacory
         
-        let moduleAViewController = moduleAFacory.createModuleA(router: router)
+        let UniversitiesListViewController = UniversitiesListFacory.createUniversitiesList(router: router)
         
-        let navigationController = UINavigationController(rootViewController: moduleAViewController)
+        let navigationController = UINavigationController(rootViewController: UniversitiesListViewController)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         

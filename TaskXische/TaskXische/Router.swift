@@ -12,22 +12,22 @@ import UniversitiesListFeature
 
 
 class Router: Routable{
-    var ModulAFactory: ModuleAFactoryProtocol?
-    var ModulBFactory: ModuleBFactoryProtocol?
+    var ModulAFactory: UniversitiesListFactoryProtocol?
+    var ModulBFactory: UniversitiesDetailsFactoryProtocol?
     
-    func popToModuleA(from: UIViewController){
-        let aVC = from.navigationController?.viewControllers.first as! ModuleAViewProtocol
+    func popToUniversitiesList(from: UIViewController){
+        let aVC = from.navigationController?.viewControllers.first as! UniversitiesListViewProtocol
         aVC.refreshData()
         from.navigationController?.popViewController(animated: true)
     }
     
-    func navigateToModuleB(from: UIViewController , universityName: String,
+    func navigateToUniversitiesDetails(from: UIViewController , universityName: String,
                            universityWebPages: [String],
                            universityAlphaTwoCode: String,
                            universityStateProvince: String,
                            universityCountry: String){
         
-        let view = ModulBFactory?.createModuleB(router: self ,universityName: universityName,universityWebPages:universityWebPages,universityAlphaTwoCode:  universityAlphaTwoCode,universityStateProvince: universityStateProvince,universityCountry:universityCountry)
+        let view = ModulBFactory?.createUniversitiesDetails(router: self ,universityName: universityName,universityWebPages:universityWebPages,universityAlphaTwoCode:  universityAlphaTwoCode,universityStateProvince: universityStateProvince,universityCountry:universityCountry)
         
         guard let view = view else{return}
         

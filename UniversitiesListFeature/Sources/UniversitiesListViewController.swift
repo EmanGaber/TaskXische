@@ -8,17 +8,17 @@
 import UIKit
 import Common
 
-public protocol ModuleAViewProtocol{
+public protocol UniversitiesListViewProtocol{
     func refreshData()
 }
 
-public class ModuleAFactory: ModuleAFactoryProtocol{
+public class UniversitiesListFactory: UniversitiesListFactoryProtocol{
     
     public init() {
         print("")
     }
     
-    public func createModuleA(router: Routable) -> UIViewController {
+    public func createUniversitiesList(router: Routable) -> UIViewController {
         let view = UniversitiesListViewController(router: router)
         let interactor = UniversitiesListInteractor()
         let presenter = UniversitiesListPresenter(view: view, interactor: interactor)
@@ -32,7 +32,7 @@ public class ModuleAFactory: ModuleAFactoryProtocol{
     
 }
 
- class UniversitiesListViewController:UIViewController,ModuleAViewProtocol{
+ class UniversitiesListViewController:UIViewController,UniversitiesListViewProtocol{
     
     @IBOutlet weak var viewEmpty: UIView!
     @IBOutlet weak var tableView: UITableView!

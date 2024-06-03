@@ -9,13 +9,13 @@ import UIKit
 import Common
 
 
-public class ModuleBFactory: ModuleBFactoryProtocol{
+public class UniversitiesDetailsFactory: UniversitiesDetailsFactoryProtocol{
     
     public init() {
         print("")
     }
     
-    public func createModuleB(router:Routable, universityName: String,
+    public func createUniversitiesDetails(router:Routable, universityName: String,
                               universityWebPages: [String],
                               universityAlphaTwoCode: String,
                               universityStateProvince: String,
@@ -87,6 +87,6 @@ class UniversityDetailsViewController:UIViewController{
     
     @IBAction func actionRefresh(_ sender: UIButton) {
         //back and refresh
-        router?.popToModuleA(from: self)
+        router?.popToUniversitiesList(from: self)
     }
 }

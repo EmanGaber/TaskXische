@@ -37,7 +37,7 @@ extension UniversitiesListViewController: UITableViewDelegate, UITableViewDataSo
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let model = presenter.getUniversityInRow(row: indexPath.row)
 
-        router!.navigateToModuleB(from: self, universityName:model?.name ?? "" ,
+        router!.navigateToUniversitiesDetails(from: self, universityName:model?.name ?? "" ,
                                                                universityWebPages: model?.webPages ?? [],
                                                                universityAlphaTwoCode: model?.alphaTwoCode ?? "",
                                                                universityStateProvince: model?.stateProvince ?? "",
